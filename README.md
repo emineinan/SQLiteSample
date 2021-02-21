@@ -1,1 +1,2 @@
-# SQLiteSample
+# SQLite Sample with Kotlin
+<img src=https://user-images.githubusercontent.com/56589369/108624031-4e517180-7453-11eb-8fb6-971662b2113b.png height="477" width="232"> <img src=https://user-images.githubusercontent.com/56589369/108624032-4f829e80-7453-11eb-9083-8f53c6d1cc73.png height="477" width="232"> <img src=https://user-images.githubusercontent.com/56589369/108624036-51e4f880-7453-11eb-95a8-1642377208e5.png height="477" width="232"> 
