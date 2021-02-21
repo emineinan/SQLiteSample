@@ -26,6 +26,14 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"Please fill blank fields",Toast.LENGTH_LONG).show()
             }
         }
+
+        binding.buttonRead.setOnClickListener {
+            var data=db.readData()
+            binding.textView.text=""
+            for(i in 0 until data.size){
+                binding.textView.append(data.get(i).id.toString()+" "+data.get(i).namesurname+" "+data.get(i).age+"\n")
+            }
+        }
     }
 
 
