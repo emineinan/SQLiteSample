@@ -58,4 +58,22 @@ class DBHelper (var context: Context):SQLiteOpenHelper(context, database_name,nu
         db.close()
         return list
     }
+
+    fun updateData(){
+        val db=this.readableDatabase
+        var my_query="Select * from "+ table_name
+        var res=db.rawQuery(my_query,null)
+        if(res.moveToFirst()){
+            do {
+                var cv=ContentValues()
+                cv.put(col_name,(res.getString(res.getColumnIndex(col_name)))+" new")
+                cv.put(col_age,(res.getInt(res.getColumnIndex(col_age)))+1)
+                db.update(table_name,cv,"$col_id=? AND $col_name=?",
+                arrayOf(res.getString(res.getColumnIndex(col_id)),
+                res.getString(res.getColumnIndex(col_name))))
+            }while (res.moveToNext())
+        }
+        res.close()
+        db.close()
+    }
 }

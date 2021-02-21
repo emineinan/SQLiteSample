@@ -34,6 +34,11 @@ class MainActivity : AppCompatActivity() {
                 binding.textView.append(data.get(i).id.toString()+" "+data.get(i).namesurname+" "+data.get(i).age+"\n")
             }
         }
+
+        binding.buttonUpdate.setOnClickListener {
+            db.updateData()
+            binding.buttonRead.performClick()
+        }
     }
 
 
