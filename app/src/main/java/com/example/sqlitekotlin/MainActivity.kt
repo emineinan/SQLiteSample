@@ -39,6 +39,11 @@ class MainActivity : AppCompatActivity() {
             db.updateData()
             binding.buttonRead.performClick()
         }
+
+        binding.buttonDelete.setOnClickListener {
+            db.deleteData()
+            binding.buttonRead.performClick()
+        }
     }
 
 
